@@ -18,7 +18,7 @@ function createBoxes() {
     div.style.height = `${size}px`;
     arrayDiv.push(div);
   }
-
+  refs.input.value = '';
   refs.div.append(...arrayDiv);
 }
 
