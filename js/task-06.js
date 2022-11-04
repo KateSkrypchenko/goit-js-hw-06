@@ -4,10 +4,13 @@ inputEl.addEventListener('blur', addClassElement);
 
 function addClassElement(event) {
   if (event.currentTarget.value.length === Number(inputEl.getAttribute('data-length'))) {
-    inputEl.classList.add('valid');
-    inputEl.classList.remove('invalid');
+    toggleClassList('valid', 'invalid');
   } else {
-    inputEl.classList.add('invalid');
-    inputEl.classList.remove('valid');
+    toggleClassList('invalid', 'valid');
   }
+}
+
+function toggleClassList(add, remove) {
+  inputEl.classList.add(add);
+  inputEl.classList.remove(remove);
 }
