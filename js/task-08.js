@@ -8,7 +8,7 @@ function handleSubmit(event) {
   const { email, password } = event.currentTarget;
   const valueInput = { email: email.value, password: password.value };
 
-  if (email.value === '' || password.value === '') {
+  if (email.value.trim() === '' || password.value.trim() === '') {
     alert('Увага! Всі поля форми повинні бути заповнені');
   } else {
     console.log(valueInput);
